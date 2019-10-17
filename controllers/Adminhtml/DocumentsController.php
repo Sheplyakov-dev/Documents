@@ -10,7 +10,7 @@ class AW_Documents_Adminhtml_DocumentsController extends Mage_Adminhtml_Controll
 
     public function indexAction()
     {
-        $this->_title($this->__('Quotes'));
+        $this->_title($this->__('Documents'));
 
         $this->_initAction();
         $this->renderLayout();
@@ -18,7 +18,7 @@ class AW_Documents_Adminhtml_DocumentsController extends Mage_Adminhtml_Controll
 
     public function newAction()
     {
-        $this->_title($this->__('Add new quote'));
+        $this->_title($this->__('Add new document'));
 
         $this->_initAction();
         $this->renderLayout();
@@ -26,7 +26,7 @@ class AW_Documents_Adminhtml_DocumentsController extends Mage_Adminhtml_Controll
 
     public function editAction()
     {
-        $this->_title($this->__('Edit quote'));
+        $this->_title($this->__('Edit Document'));
 
         $this->_initAction();
         $this->renderLayout();
