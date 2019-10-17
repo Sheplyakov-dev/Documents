@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<config>
+    <modules>
+        <AW_Documents>
+            <version>1.0.0</version>
+        </AW_Documents>
+    </modules>
+    <global>
+        <models>
+            <documents>
+                <class>AW_Documents_Model</class>
+                <resourceModel>documents_resource</resourceModel>
+            </documents>
+            <documents_resource>
+                <class>AW_Documents_Model_Resource</class>
+                <entities>
+                    <library>
+                        <table>catalog_documents</table>
+                    </library>
+                    <files>
+                        <table>documents_files</table>
+                    </files>
+                </entities>
+            </documents_resource>
+        </models>
+        <resources>
+            <documents_setup>
+                <setup>
+                    <module>AW_Documents</module>
+                </setup>
+            </documents_setup>
+        </resources>
+    </global>
+    <menu>
+        <aw_documents translate="title" module="aw_documents">
+            <title>Library</title>
+            <sort_order>1</sort_order>
+            <action>adminhtml/documents</action>
+        </aw_documents>
+    </menu>
+    <adminhtml>
+        <layout>
+            <updates>
+                <aw_documents>
+                    <file>documents/library.xml</file>
+                </aw_documents>
+            </updates>
+        </layout>
+    </adminhtml>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <aw_documents before="Mage_Adminhtml">AW_Documents_Adminhtml</aw_documents>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+</config>
